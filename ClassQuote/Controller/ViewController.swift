@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var newQuoteButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    
+    var tg: Int!
     override func viewDidLoad() {
         super.viewDidLoad()
         addShadowToQuoteLabel()
