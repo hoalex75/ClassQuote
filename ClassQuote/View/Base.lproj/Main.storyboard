@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClassQuote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ah-2t-DRF">
+                                <rect key="frame" x="20" y="40" width="335" height="335"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="335" id="nHZ-p7-3uE"/>
+                                    <constraint firstAttribute="width" secondItem="6ah-2t-DRF" secondAttribute="height" multiplier="1:1" id="u7D-KD-bfL"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xt-9w-Nnh">
+                                <rect key="frame" x="20" y="40" width="335" height="335"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ll-vU-Phd">
+                                <rect key="frame" x="20" y="380" width="335" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CTT-ao-smh">
+                                <rect key="frame" x="20" y="601" width="335" height="46"/>
+                                <color key="backgroundColor" red="0.968959868" green="0.35584176080000002" blue="0.26828693269999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <state key="normal" title="New Quote">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tappedNewQuoteButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Wd-f5-EaS"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Yxt-W5-0pe">
+                                <rect key="frame" x="169" y="605.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9xt-9w-Nnh" firstAttribute="height" secondItem="6ah-2t-DRF" secondAttribute="height" id="BZr-OI-Hr5"/>
+                            <constraint firstItem="6ah-2t-DRF" firstAttribute="leading" secondItem="60P-T0-4vJ" secondAttribute="leading" constant="20" id="DNH-YN-gbm"/>
+                            <constraint firstItem="7Ll-vU-Phd" firstAttribute="top" secondItem="6ah-2t-DRF" secondAttribute="bottom" constant="5" id="Ob1-xi-VPm"/>
+                            <constraint firstItem="Yxt-W5-0pe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TNM-fC-4VN"/>
+                            <constraint firstItem="9xt-9w-Nnh" firstAttribute="centerY" secondItem="6ah-2t-DRF" secondAttribute="centerY" id="TbI-Jw-PLy"/>
+                            <constraint firstItem="9xt-9w-Nnh" firstAttribute="centerX" secondItem="6ah-2t-DRF" secondAttribute="centerX" id="ZSu-wK-hKE"/>
+                            <constraint firstItem="7Ll-vU-Phd" firstAttribute="trailing" secondItem="6ah-2t-DRF" secondAttribute="trailing" id="ZqM-IR-ltW"/>
+                            <constraint firstItem="6ah-2t-DRF" firstAttribute="top" secondItem="60P-T0-4vJ" secondAttribute="top" constant="20" id="fmi-ZV-jwj"/>
+                            <constraint firstItem="60P-T0-4vJ" firstAttribute="bottom" secondItem="CTT-ao-smh" secondAttribute="bottom" constant="20" id="jCf-0e-OYf"/>
+                            <constraint firstItem="60P-T0-4vJ" firstAttribute="trailing" secondItem="6ah-2t-DRF" secondAttribute="trailing" constant="20" id="jKN-vE-zyF"/>
+                            <constraint firstItem="9xt-9w-Nnh" firstAttribute="width" secondItem="6ah-2t-DRF" secondAttribute="width" id="lcX-uo-r05"/>
+                            <constraint firstItem="7Ll-vU-Phd" firstAttribute="leading" secondItem="6ah-2t-DRF" secondAttribute="leading" id="oGz-0c-J99"/>
+                            <constraint firstItem="CTT-ao-smh" firstAttribute="leading" secondItem="60P-T0-4vJ" secondAttribute="leading" constant="20" id="rUV-rt-Mtr"/>
+                            <constraint firstItem="Yxt-W5-0pe" firstAttribute="centerY" secondItem="CTT-ao-smh" secondAttribute="centerY" id="xmP-xb-UhA"/>
+                            <constraint firstItem="60P-T0-4vJ" firstAttribute="trailing" secondItem="CTT-ao-smh" secondAttribute="trailing" constant="20" id="zXv-xn-IyG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="60P-T0-4vJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="Yxt-W5-0pe" id="MX7-p5-6ES"/>
+                        <outlet property="authorLabel" destination="7Ll-vU-Phd" id="vBY-LJ-cpV"/>
+                        <outlet property="imageView" destination="6ah-2t-DRF" id="vic-wd-dJu"/>
+                        <outlet property="newQuoteButton" destination="CTT-ao-smh" id="sTa-H8-vGu"/>
+                        <outlet property="quoteLabel" destination="9xt-9w-Nnh" id="TXe-ty-b2k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

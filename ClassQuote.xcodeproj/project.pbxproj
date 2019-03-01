@@ -54,14 +54,46 @@
 		FABB9AA122296CE000D131E0 /* ClassQuote */ = {
 			isa = PBXGroup;
 			children = (
-				FABB9AA222296CE000D131E0 /* AppDelegate.swift */,
-				FABB9AA422296CE000D131E0 /* ViewController.swift */,
-				FABB9AA622296CE000D131E0 /* Main.storyboard */,
-				FABB9AA922296CE300D131E0 /* Assets.xcassets */,
-				FABB9AAB22296CE300D131E0 /* LaunchScreen.storyboard */,
-				FABB9AAE22296CE300D131E0 /* Info.plist */,
+				FABB9AB422296D0200D131E0 /* Model */,
+				FABB9AB522296D0900D131E0 /* View */,
+				FABB9AB622296D0F00D131E0 /* Controller */,
+				FABB9AB722296D1700D131E0 /* Supporting Files */,
 			);
 			path = ClassQuote;
+			sourceTree = "<group>";
+		};
+		FABB9AB422296D0200D131E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FABB9AB522296D0900D131E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FABB9AA622296CE000D131E0 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FABB9AB622296D0F00D131E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FABB9AA422296CE000D131E0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FABB9AB722296D1700D131E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FABB9AAB22296CE300D131E0 /* LaunchScreen.storyboard */,
+				FABB9AA922296CE300D131E0 /* Assets.xcassets */,
+				FABB9AA222296CE000D131E0 /* AppDelegate.swift */,
+				FABB9AAE22296CE300D131E0 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +316,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 529LRG4ZS2;
-				INFOPLIST_FILE = ClassQuote/Info.plist;
+				INFOPLIST_FILE = "ClassQuote/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -292,7 +325,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.alexandreholet.ClassQuote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,7 +335,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 529LRG4ZS2;
-				INFOPLIST_FILE = ClassQuote/Info.plist;
+				INFOPLIST_FILE = "ClassQuote/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +344,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fr.alexandreholet.ClassQuote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
