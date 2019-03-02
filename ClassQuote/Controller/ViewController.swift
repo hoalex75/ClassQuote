@@ -28,7 +28,37 @@ class ViewController: UIViewController {
     }
     
     @IBAction func tappedNewQuoteButton() {
+        toggleActivityIndicator(shown: true)
+        QuoteService.shared.getQuote { (success, quote) in
+            if success, let quote = quote {
+                self.update(quote)
+            } else {
+                self.presentAlert()
+            }
+            self.toggleActivityIndicator(shown: false)
+        }
     }
     
+    private func update(_ quote: Quote) {
+        quoteLabel.text = quote.text
+        authorLabel.text = quote.author
+        imageView.image = UIImage(data: quote.imageData)
+    }
+    
+    private func toggleActivityIndicator(shown: Bool){
+        newQuoteButton.isHidden = shown
+        activityIndicator.isHidden = !shown
+    }
+    
+    private func presentAlert() {
+        let alertVC = UIAlertController(title: "Erreur requête", message: "Une erreur s'est produite", preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        let retry = UIAlertAction(title: "Réessayer", style: .default, handler: { (action) in
+            self.tappedNewQuoteButton()
+        })
+        alertVC.addAction(ok)
+        alertVC.addAction(retry)
+        present(alertVC, animated: true, completion: nil)
+    }
 }
 
